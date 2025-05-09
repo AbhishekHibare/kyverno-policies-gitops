@@ -2,3 +2,4 @@ resources:
   - require-labels.yaml
   - restrict-image-registries.yaml
   - disallow-latest-tag.yaml
+  - require-resources.yaml
