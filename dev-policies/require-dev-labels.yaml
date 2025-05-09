@@ -1,0 +1,20 @@
+apiVersion: kyverno.io/v1
+kind: Policy
+metadata:
+  name: require-dev-labels
+  namespace: dev
+spec:
+  validationFailureAction: enforce
+  rules:
+    - name: check-for-dev-labels
+      match:
+        resources:
+          kinds:
+            - Pod
+      validate:
+        message: "The 'env: dev' label is required."
+        pattern:
+          metadata:
+            labels:
+              env: dev
+

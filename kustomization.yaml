@@ -1,2 +1,4 @@
 resources:
   - policies
+  - dev-policies
+  - namespaces
